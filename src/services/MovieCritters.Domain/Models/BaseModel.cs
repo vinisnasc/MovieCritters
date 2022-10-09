@@ -1,4 +1,4 @@
-﻿namespace MovieCritters.Domain
+﻿namespace MovieCritters.Domain.Models
 {
     public class BaseModel
     {

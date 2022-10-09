@@ -1,4 +1,4 @@
-﻿namespace MovieCritters.Domain
+﻿namespace MovieCritters.Domain.Models
 {
     public class Movie : BaseModel
     {
@@ -10,8 +10,7 @@
         public DateOnly StartYear { get; set; }
         public DateOnly EndYear { get; set; }
         public int RuntimeMinutes { get; set; }
-        public string[] Genres { get; set; }
+        public List<string> Genres { get; set; }
+        public double Rating { get; set; }
     }
-
-
 }
