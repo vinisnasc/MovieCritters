@@ -12,5 +12,6 @@
         public int RuntimeMinutes { get; set; }
         public List<string> Genres { get; set; }
         public double Rating { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
