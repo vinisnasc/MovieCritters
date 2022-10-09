@@ -22,6 +22,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./MovieCritters.sln
     - name: Build API
-      run: dotnet build src/services/MovieCritters.API.csproj --no-restore
+      run: dotnet build src/services/MovieCritters.API/MovieCritters.API.csproj --no-restore
     - name: Test API
-      run: dotnet test src/services/MovieCritters.API.csproj --no-build --verbosity normal
+      run: dotnet test src/services/MovieCritters.API/MovieCritters.API.csproj --no-build --verbosity normal
