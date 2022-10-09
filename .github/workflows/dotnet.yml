@@ -1,0 +1,27 @@
+name: .NET CI
+
+on:
+  push:
+    branches:
+      - movie-api
+  pull_request:
+    branches:
+      - movie-api
+
+jobs:
+  integration:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./MovieCritters.sln
+    - name: Build API
+      run: dotnet build src/services/MovieCritters.API.csproj --no-restore
+    - name: Test API
+      run: dotnet test src/services/MovieCritters.API.csproj --no-build --verbosity normal
