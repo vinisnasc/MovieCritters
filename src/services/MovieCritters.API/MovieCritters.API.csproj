@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\services\MovieCritters.Domain\MovieCritters.Domain.csproj" />
+    <ProjectReference Include="..\MovieCritters.Domain\MovieCritters.Domain.csproj" />
   </ItemGroup>
 
 </Project>
