@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{98
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieCritters.API", "src\services\MovieCritters.API\MovieCritters.API.csproj", "{8B2CB370-6562-4C52-BD48-EF6F357F492E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCritters.Application", "src\services\MovieCritters.Application\MovieCritters.Application.csproj", "{7B51C869-153B-41F1-B656-602BB5B4F115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCritters.Infrastructure", "src\services\MovieCritters.Infrastructure\MovieCritters.Infrastructure.csproj", "{E2F5980C-4581-482D-A9D1-F646F2918279}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{8B2CB370-6562-4C52-BD48-EF6F357F492E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B2CB370-6562-4C52-BD48-EF6F357F492E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B2CB370-6562-4C52-BD48-EF6F357F492E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B51C869-153B-41F1-B656-602BB5B4F115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B51C869-153B-41F1-B656-602BB5B4F115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B51C869-153B-41F1-B656-602BB5B4F115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B51C869-153B-41F1-B656-602BB5B4F115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F5980C-4581-482D-A9D1-F646F2918279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F5980C-4581-482D-A9D1-F646F2918279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F5980C-4581-482D-A9D1-F646F2918279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F5980C-4581-482D-A9D1-F646F2918279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +55,8 @@ Global
 		{F8A1D681-9F5D-444D-8AAA-605345F956F5} = {984739D0-294E-4256-88EE-E6993F08D543}
 		{984739D0-294E-4256-88EE-E6993F08D543} = {92891D48-AE07-4FA8-A604-840558FE8792}
 		{8B2CB370-6562-4C52-BD48-EF6F357F492E} = {984739D0-294E-4256-88EE-E6993F08D543}
+		{7B51C869-153B-41F1-B656-602BB5B4F115} = {984739D0-294E-4256-88EE-E6993F08D543}
+		{E2F5980C-4581-482D-A9D1-F646F2918279} = {984739D0-294E-4256-88EE-E6993F08D543}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B15D4B0F-2730-46CE-97F4-C4BB38627706}
