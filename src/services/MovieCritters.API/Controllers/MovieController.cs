@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MovieCritters.Application.Common.Results;
 using MovieCritters.Application.Movies;
 using System.Net;
 
@@ -24,12 +25,13 @@ namespace MovieCritters.API.Controllers
         /// <param name="pageSize">Page size.</param>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(PagedResult<MovieListResult>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)] 
         public IActionResult Get([FromQuery] int pageNumber, int pageSize)
         {
             try
             {
-                return BadRequest(new NotImplementedException());
+                return Ok(_movieService.GetMovies(pageNumber, pageSize));
             }
             catch (Exception ex)
             {

@@ -1,5 +1,6 @@
 ﻿using Mapster;
 using MovieCritters.Application.Common.Interfaces.Persistence;
+using MovieCritters.Application.Common.Results;
 
 namespace MovieCritters.Application.Movies
 {
@@ -22,6 +23,17 @@ namespace MovieCritters.Application.Movies
             }
 
             return movie.Adapt<MovieResult>();
+        }
+
+        public PagedResult<MovieListResult> GetMovies(int pageNumber, int pageSize)
+        {
+            var movies = _movieRepository.GetPaged(pageNumber, pageSize, out int count);
+
+            return new PagedResult<MovieListResult>()
+            {
+                Data = movies.Adapt<IList<MovieListResult>>(),
+                Count = count
+            };
         }
     }
 }
