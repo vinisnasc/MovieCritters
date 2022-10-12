@@ -1,4 +1,4 @@
-﻿namespace MovieCritters.Application.Movie
+﻿namespace MovieCritters.Application.Movies
 {
     public record MovieResult(
         Guid Id,
@@ -8,7 +8,7 @@
         string Type,
         bool IsAdult,
         int StartYear,
-        int EndYear,
+        int? EndYear,
         int RuntimeMinutes,
         List<string> Genres,
         double Rating,

@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using MovieCritters.Application.Movie;
+using MovieCritters.Application.Movies;
 
 namespace MovieCritters.Application
 {

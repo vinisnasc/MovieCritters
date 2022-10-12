@@ -1,4 +1,4 @@
-﻿namespace MovieCritters.Application.Movie
+﻿namespace MovieCritters.Application.Movies
 {
     public interface IMovieService
     {

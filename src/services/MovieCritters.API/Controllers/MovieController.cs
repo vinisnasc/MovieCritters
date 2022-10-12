@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MovieCritters.Application.Movie;
+using MovieCritters.Application.Movies;
 using System.Net;
 
 namespace MovieCritters.API.Controllers
 {
-    [Route("[api/controller]")]
+    [Route("[controller]")]
     public class MovieController : BaseApiController
     {
         private readonly ILogger<MovieController> _logger;
