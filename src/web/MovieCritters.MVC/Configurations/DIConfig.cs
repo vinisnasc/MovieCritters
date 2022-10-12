@@ -7,6 +7,7 @@ namespace MovieCritters.MVC.Configurations
     {
         public static void RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddHttpClient<IMovieService, MovieService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddHttpClient<IMovieService, MovieService>(c =>

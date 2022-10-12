@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MovieCritters.MVC.Models;
+using MovieCritters.MVC.Services.Interfaces;
 using System.Diagnostics;
 
 namespace MovieCritters.MVC.Controllers
@@ -15,6 +16,7 @@ namespace MovieCritters.MVC.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
