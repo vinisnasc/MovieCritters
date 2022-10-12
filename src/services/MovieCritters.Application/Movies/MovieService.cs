@@ -6,16 +6,16 @@ namespace MovieCritters.Application.Movies
 {
     public class MovieService : IMovieService
     {
-        private readonly IMovieRepository _movieRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public MovieService(IMovieRepository movieRepository)
+        public MovieService(IUnitOfWork unitOfWork)
         {
-            _movieRepository = movieRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<MovieResult> GetMovie(Guid id)
         {
-            var movie = await _movieRepository.GetById(id);
+            var movie = await _unitOfWork.MovieRepository.GetByIdAsync(id);
 
             if (movie is null)
             {
@@ -27,7 +27,7 @@ namespace MovieCritters.Application.Movies
 
         public PagedResult<MovieListResult> GetMovies(int pageNumber, int pageSize)
         {
-            var movies = _movieRepository.GetPaged(pageNumber, pageSize, out int count);
+            var movies = _unitOfWork.MovieRepository.GetPaged(pageNumber, pageSize, out int count);
 
             return new PagedResult<MovieListResult>()
             {
