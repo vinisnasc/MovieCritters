@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MovieCritters.Application\MovieCritters.Application.csproj" />
     <ProjectReference Include="..\MovieCritters.Domain\MovieCritters.Domain.csproj" />
   </ItemGroup>
 

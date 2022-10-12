@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MovieCritters.Domain.DTOs;
+using MovieCritters.Application.Movie;
 using System.Net;
 
 namespace MovieCritters.API.Controllers
@@ -8,10 +8,13 @@ namespace MovieCritters.API.Controllers
     public class MovieController : BaseApiController
     {
         private readonly ILogger<MovieController> _logger;
+        private readonly IMovieService _movieService;
 
-        public MovieController(ILogger<MovieController> logger)
+        public MovieController(ILogger<MovieController> logger,
+            IMovieService movieService)
         {
             _logger = logger;
+            _movieService = movieService;
         }
 
         /// <summary>
@@ -42,13 +45,13 @@ namespace MovieCritters.API.Controllers
         /// <param name="id">Movie Id.</param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(MovieDTO), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(MovieResult), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetById(Guid id)
         {
             try
             {
-                return BadRequest(new NotImplementedException());
+                return Ok(await _movieService.GetMovie(id));
             }
             catch (Exception ex)
             {
