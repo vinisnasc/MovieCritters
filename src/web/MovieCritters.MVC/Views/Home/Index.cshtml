@@ -1,8 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+        color: yellow;
+        font-size: 20px;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    .unchecked {
+        font-size: 20px;
+    }
+</style>
+
+<div class="row">
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.vCEHmWZWRffo0ooOGj25uwAAAA?pid=ImgDet&rs=1" alt="Card image cap">
+        <div class="card-body text-center">
+            <p class="card-text">One flew over the cuckoo's nest</p>
+            <Rating rate-note="3"></Rating>
+        </div>
+    </div>
+
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.hyLiYCATAJzQvW-OoGxd_AHaKm?pid=ImgDet&rs=1" alt="Card image cap">
+        <div class="card-body text-center">
+            <p class="card-text">Brother bear</p>
+            <Rating rate-note="5"></Rating>
+        </div>
+    </div>
+
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/R.ae378cd946df4572307883769dd061cf?rik=Z%2fJ70eeCqhLVxg&riu=http%3a%2f%2fcdn.traileraddict.com%2fcontent%2fcolumbia-pictures%2fspiderman2-2.jpg&ehk=Bk2dawe%2b5gxVLZ2xK1nJOPZbctEClTMe6aIt1OHW%2fWQ%3d&risl=&pid=ImgRaw&r=0" alt="Card image cap">
+        <div class="card-body text-center">
+            <p class="card-text">Spider-Man 2</p>
+            <Rating rate-note="4"></Rating>
+        </div>
+    </div>
+
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.xD6q-jmcG9cU0zDh1UhkDwHaLH?pid=ImgDet&rs=1" alt="Card image cap">
+        <div class="card-body text-center">
+            <p class="card-text">Gladiator</p>
+            <Rating rate-note="1"></Rating>
+        </div>
+    </div>
 </div>
