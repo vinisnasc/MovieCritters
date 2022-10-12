@@ -5,7 +5,7 @@ using System.Net;
 
 namespace MovieCritters.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class MovieController : BaseApiController
     {
         private readonly ILogger<MovieController> _logger;
