@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using MovieCritters.Application;
 using MovieCritters.Infrastructure;
+using MovieCritters.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -17,6 +19,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 {
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<MovieCrittersContext>();
+        if (db.Database.GetPendingMigrations().Any())
+        {
+            db.Database.Migrate();
+        }
+    }
+
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {

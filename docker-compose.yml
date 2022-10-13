@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  moviecritters-postgres:
+    image: postgres:13-alpine
+
+  moviecritters-api:
+    image: ${DOCKER_REGISTRY-}moviecrittersapi
+    build:
+      context: .
+      dockerfile: src/services/MovieCritters.API/Dockerfile
+
+volumes:
+  postgres-data:
