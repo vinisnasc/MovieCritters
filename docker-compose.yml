@@ -9,6 +9,12 @@ services:
     build:
       context: .
       dockerfile: src/services/MovieCritters.API/Dockerfile
+  
+  moviecritters-mvc:
+    image: ${DOCKER_REGISTRY-}moviecrittersmvc
+    build:
+      context: .
+      dockerfile: src/web/MovieCritters.MVC/Dockerfile
 
 volumes:
   postgres-data:

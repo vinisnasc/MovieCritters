@@ -24,3 +24,13 @@ services:
     depends_on:
       - moviecritters-postgres
     restart: always
+
+  moviecritters-mvc:
+    container_name: moviecritters-mvc
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ServiceUrls:MovieCrittersApi=http://moviecritters-api"
+    depends_on:
+      - moviecritters-api
+    ports:
+      - "8001:80"
