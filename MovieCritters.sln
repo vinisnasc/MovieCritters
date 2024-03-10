@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{98
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieCritters.API", "src\services\MovieCritters.API\MovieCritters.API.csproj", "{8B2CB370-6562-4C52-BD48-EF6F357F492E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCritters.Application", "src\services\MovieCritters.Application\MovieCritters.Application.csproj", "{7B51C869-153B-41F1-B656-602BB5B4F115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieCritters.Application", "src\services\MovieCritters.Application\MovieCritters.Application.csproj", "{7B51C869-153B-41F1-B656-602BB5B4F115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCritters.Infrastructure", "src\services\MovieCritters.Infrastructure\MovieCritters.Infrastructure.csproj", "{E2F5980C-4581-482D-A9D1-F646F2918279}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieCritters.Infrastructure", "src\services\MovieCritters.Infrastructure\MovieCritters.Infrastructure.csproj", "{E2F5980C-4581-482D-A9D1-F646F2918279}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

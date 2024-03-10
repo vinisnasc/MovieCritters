@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  moviecritters-postgres:
+    image: postgres:13-alpine
+    container_name: moviecritters-postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=MovieCritters
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/data/db
+    restart: always
+
+  moviecritters-api:
+    container_name: moviecritters-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:PostgreSQL=Server=moviecritters-postgres;Port=5432;Database=MovieCritters;User Id=admin;Password=123456"
+    ports:
+      - 8000:80
+    depends_on:
+      - moviecritters-postgres
+    restart: always
+
+  moviecritters-mvc:
+    container_name: moviecritters-mvc
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ServiceUrls:MovieCrittersApi=http://moviecritters-api"
+    depends_on:
+      - moviecritters-api
+    ports:
+      - "8001:80"

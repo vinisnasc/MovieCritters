@@ -2,8 +2,8 @@
 
 namespace MovieCritters.Application.Common.Interfaces.Persistence
 {
-    public interface IMovieRepository : IRepository<Movie>, IAsyncRepository<Movie>
+    public interface IAsyncRepository<T> where T : BaseEntity
     {
-        
+        public Task<T> GetByIdAsync(Guid id);
     }
 }
