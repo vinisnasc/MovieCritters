@@ -20,7 +20,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ConnectionStrings:PostgreSQL=Server=moviecritters-postgres;Port=5432;Database=MovieCritters;User Id=admin;Password=123456"
     ports:
-      - 8000:80
+      - 8000:8080
     depends_on:
       - moviecritters-postgres
     restart: always
@@ -33,4 +33,4 @@ services:
     depends_on:
       - moviecritters-api
     ports:
-      - "8001:80"
+      - "8001:8080"
